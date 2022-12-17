@@ -1,6 +1,6 @@
 # # numbers to be printed from 1 to 100 seprated by a space
 def fizzbuzz():
-    for i in range(1,101):
+    for i in range(1, 101):
         # multiples of 3 print fizz
         if i % 3 == 0 and i % 5 == 0:
             print("fizzbuzz", end= ' ')
