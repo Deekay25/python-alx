@@ -1,0 +1,4 @@
+0 LOAD_FAST                0 (a)
+3 LOAD_FAST                1 (b)
+6 COMPARE_OP               0 (<)
+9 POP_JUMP_IF_FALSE       16
