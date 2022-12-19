@@ -14,5 +14,12 @@ def fib(n):
         a, b = b, a + b
     return result
 
+def fib2(n):
+    a,b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a + b
+    print()
 
-#6.1. More on Modules
+
+print(dir())
