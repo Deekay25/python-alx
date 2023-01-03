@@ -9,3 +9,5 @@ if hrs > 40:
 else:
     pay = hrs * rate
 print('pay:', float(pay))
+
+
