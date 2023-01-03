@@ -10,6 +10,8 @@
 smallest_so_far = None
 
 for num in [1,10,22,45,73,27]:
+    # using just 'if num < smallest_so_far: ' is wrong
+    # because you cannot compare none types <,> etc
     if smallest_so_far is None or num < smallest_so_far:
         smallest_so_far = num
     print(num, smallest_so_far)
