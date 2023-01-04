@@ -1,0 +1,61 @@
+# if string is [3:3] equal or first slice is greater, it returns an empty string
+fruit = 'banana'
+fruit[3:3]
+returns ' '
+
+# in operator
+The word in is a boolean operator that takes two strings and returns True if the
+first appears as a substring in the second:
+>>> 'a' in 'banana'
+True
+>>> 'seed' in 'banana'
+False
+
+
+#dir() function
+the dir function lists the methods, and you can use help to get some simple
+documentation on a method, a better source of documentation for string methods
+would be
+name = 'banana'
+dir(name)
+returns all the methods associated with a string
+
+# .find method
+>>> word = 'banana'
+>>> index = word.find('a')
+>>> print(index)
+1
+It can take as a second argument the index where it should start:
+>>> word.find('na', 3)
+4
+
+# .strip() method
+>>> line = ' Here we go '
+>>> line.strip()
+'Here we go'
+
+
+# .startswith() method
+>>> line = 'Have a nice day'
+>>> line.startswith('Have')
+True
+>>> line.startswith('h')
+False
+another example
+>>> line = 'Have a nice day'
+>>> line.startswith('h')
+False
+>>> line.lower()
+'have a nice day'
+>>> line.lower().startswith('h')
+True
+
+
+# .replace
+name = 'adnan ahmad'
+new_name = name.replace('adnan', 'deekay')
+returns deekay ahmad
+
+#using help
+print(dir(fruit))
+print(help(fruit.capitalize))
