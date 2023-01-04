@@ -19,5 +19,6 @@ index = 0
 while index < len(fruit):
     if fruit[index] == 'a':
         count = count + 1
+        print(fruit[index], count)
     index = index + 1
 print(count)
