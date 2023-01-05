@@ -245,3 +245,10 @@ This function leaves the original list unmodified. Here’s how it is used:
 >>> rest = tail(letters)
 >>> print(rest)
 ['b', 'c']
+
+#######################################
+--> Debugging
+#######################################
+-- refer to the book
+-- docs - docs.python.org/library/stdtypes.html#common-sequence-operations
+-- docs - docs.python.org/library/stdtypes.html#mutable-sequence-types
