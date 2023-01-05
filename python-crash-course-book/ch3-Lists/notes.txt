@@ -44,3 +44,35 @@ reverses the order of the list:
 The reverse() method changes the order of a list permanently, but you
 can revert to the original order anytime by applying reverse() to the same
 list a second time.
+
+#####################################
+--> List Comprehensions
+#####################################
+A list comprehension allows you to generate
+this same list in just one line of code. A list comprehension combines the
+for loop and the creation of new elements into one line, and automatically
+appends each new element.
+
+squares = [value**2 for value in range(1, 11)]
+print(squares)
+
+#####################################
+--> Looping Through a Slice
+#####################################
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print("Here are the first three players on my team:")
+u for player in players[:3]:
+print(player.title())
+
+#####################################
+--> Copying a List
+#####################################
+my_foods = ['pizza', 'falafel', 'carrot cake']
+friend_foods = my_foods[:]
+
+print("My favorite foods are:")
+print(my_foods)
+
+print("\nMy friend's favorite foods are:")
+print(friend_foods)
