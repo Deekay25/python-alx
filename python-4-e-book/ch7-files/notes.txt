@@ -1,0 +1,97 @@
+Files
+
+#######################################
+--> 7.2 Opening files
+#######################################
+
+>>> fhand = open('mbox.txt')
+>>> print(fhand)
+<_io.TextIOWrapper name='mbox.txt' mode='r' encoding='cp1252'>
+
+If the open is successful, the operating system returns us a file handle. The file
+handle is not the actual data contained in the file, but instead it is a “handle” that
+we can use to read the data. You are given a handle if the requested file exists and
+you have the proper permissions to read the file.
+
+#######################################
+--> 7.3 Text files and lines
+#######################################
+basically there is always a new line at the end of line 
+in a file
+
+#######################################
+--> 7.4 Reading files
+#######################################
+
+>>> fhand = open('mbox-short.txt')
+>>> inp = fhand.read() // when printed, prints the entire contents in the file
+>>> print(len(inp))
+94626
+>>> print(inp[:20])
+From stephen.marquar
+
+In this example, the entire contents (all 94,626 characters) of the file mbox-short.txt
+are read directly into the variable inp. We use string slicing to print out the first
+20 characters of the string data stored in inp.
+
+#######################################
+--> 7.5 Searching through a file
+#######################################
+# how to do it the correcttly
+- search through each line of the file
+- remove white spaces at the end of the file using rstrip()
+- use continue to skip using lines that you do not want
+
+##############################################
+--> 7.6 Letting the user choose the file name
+##############################################
+- prompt the user for a file name
+- try to open the file 
+- if file exists open else throw an error and quit()
+
+#######################################
+--> 7.8 Writing files
+#######################################
+
+>>> fout = open('output.txt', 'w')
+>>> print(fout)
+<_io.TextIOWrapper name='output.txt' mode='w' encoding='cp1252'>
+If the file already exists, opening it in write mode clears out the old data and starts
+fresh, so be careful! If the file doesn’t exist, a new one is created.
+
+>>> line1 = "This here's the wattle,\n"
+>>> fout.write(line1)
+
+Again, the file object keeps track of where it is, so if you call write again, it adds
+the new data to the end.
+We must make sure to manage the ends of lines as we write to the file by explicitly
+inserting the newline character when we want to end a line. The print statement
+automatically appends a newline, but the write method does not add the newline
+automatically.
+
+>>> line2 = 'the emblem of our land.\n'
+>>> fout.write(line2)
+24
+
+When you are done writing, you have to close the file to make sure that the last
+bit of data is physically written to the disk so it will not be lost if the power goes
+off.
+
+>>> fout.close()
+
+We could close the files which we open for read as well, but we can be a little sloppy
+if we are only opening a few files since Python makes sure that all open files are
+closed when the program ends. When we are writing files, we want to explicitly
+close the files so as to leave nothing to chance
+
+
+### Very important
+>>> s = '1 2\t 3\n 4'
+>>> print(s)
+1 2 3
+4
+- you may get an error without knowing where the error from
+- using repr() function you can get the string equivalent of an object
+
+>>> print(repr(s))
+'1 2\t 3\n 4'
