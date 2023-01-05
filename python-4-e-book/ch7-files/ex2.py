@@ -12,7 +12,16 @@
 # Enter the file name: mbox-short.txt
 # Average spam confidence: 0.750718518519
 
-fhand = open('mbox-short.txt')
-for line in fhand:
+fhand = input('Enter a file name: ')
+fopen = open(fhand)
+count = 0
+sum = 0
+for line in fopen:
     line = line.rstrip()
-    print(line)
+    if line.startswith('X-DSPAM-Confidence:'):
+        line_search = line.find(' ') # before I used line.find(':'), the program works correct but using (' ') is better
+        line_found = line[line_search + 1:]
+        # print(repr(line_found)) // very important line, the repr show there is a space when i use line.find(':')
+        sum = sum + float(line_found)
+        count = count + 1
+print(sum/count)
