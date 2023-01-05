@@ -8,7 +8,3 @@
 #     generate a list of all prime numbers between a range of the min max number
 
 
-name = 'banana'
-
-for i in range(len(name)):
-    print(name[::-1][i])
