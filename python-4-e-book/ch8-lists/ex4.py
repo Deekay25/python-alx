@@ -44,3 +44,4 @@ for line in fopen:
 # when done sort the words alphabetically and print
 unique_list.sort()
 print(unique_list)
+# print(sorted(unique_list))
