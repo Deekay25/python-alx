@@ -1,3 +1,5 @@
+# resolve exercise please
+
 # Exercise 4: Find all unique words in a file
 # Shakespeare used over 20,000 words in his works. But how would you
 # determine that? How would you produce the list of all the words that
@@ -22,3 +24,23 @@
 # 'is', 'kill', 'light', 'moon', 'pale', 'sick', 'soft',
 # 'sun', 'the', 'through', 'what', 'window',
 # 'with', 'yonder']
+
+# open a file and read line by line
+fhand = input('Enter file: ')
+fopen = open(fhand)
+unique_list = []
+for line in fopen:
+    # print(line)
+# split the line into words
+    line = line.split()
+# for each word, check if it is already in the list of the unique words
+    # print(line)
+    for i in line:
+        if i not in unique_list:
+        # if i is not unique_list: # this way did not work
+        # if i != unique_list: # this way did not work
+# if word is not on the list, add it to the list
+            unique_list.append(i)
+# when done sort the words alphabetically and print
+unique_list.sort()
+print(unique_list)
