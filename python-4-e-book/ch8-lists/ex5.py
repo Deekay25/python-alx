@@ -29,18 +29,33 @@
 # cwen@iupui.edu
 # There were 27 lines in the file with From as the first word
 
-# prompt user for a file name
-fhand = input('Enter a file: ')
-fopen = open(fhand)
-# read through the mail box data and split the lines that start with 'From '
+# # prompt user for a file name
+# fhand = input('Enter a file: ')
+# fopen = open(fhand)
+# # read through the mail box data and split the lines that start with 'From '
+# count = 0
+# for line in fopen:
+#     if line.startswith('From '):
+#        line = line.split()
+#        print(line)
+# # retrieve the people that sent the email
+#        emails = line[1]
+#        count = count + 1
+#     print(emails)   
+# # count the number of 'From ' and print the cont
+# print('There were ',count,' lines in the file with From as the first word')
+
+
+#better approach
+# fhand = input("Enter a file name: ")
+fhand = open('mbox-short.txt')
+# fopen = open(fhand)
 count = 0
-for line in fopen:
-    if line.startswith('From '):
-       line = line.split()
-       print(line)
-# retrieve the people that sent the email
-       emails = line[1]
-       count = count + 1
-    print(emails)   
-# count the number of 'From ' and print the cont
-print('There were ',count,' lines in the file with From as the first word')
+for line in fhand:
+    word = line.split()
+    if len(word) < 3 or word[0] != 'From ':
+        continue
+    print(word[1])
+    count = count + 1
+print('There were', count, 'line in the file with From as the first word')
+
