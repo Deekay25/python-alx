@@ -1,0 +1,1 @@
+# write a program that counts each word and number of occurence from a file called romeo.txt
