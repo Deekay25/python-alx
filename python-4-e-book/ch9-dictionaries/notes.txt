@@ -66,3 +66,26 @@ counts = { 'chuck' : 1 , 'annie' : 42, 'jan': 100}
 for key in counts:
 if counts[key] > 10 :
 print(key, counts[key])
+
+#############################
+--> 9.4 Advanced text parsing
+#############################
+
+We can solve both these problems by using the string methods lower, punctuation,
+and translate. The translate is the most subtle of the methods. Here is the
+documentation for translate:
+line.translate(str.maketrans(fromstr, tostr, deletestr))
+Replace the characters in fromstr with the character in the same position in tostr
+and delete all characters that are in deletestr. The fromstr and tostr can be
+empty strings and the deletestr parameter can be omitted.
+
+# checking the things pyton consider as punctuation
+>>> import string
+>>> string.punctuation
+'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+
+
+##################################
+--> debugging
+################################
+-go to book
