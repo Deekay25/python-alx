@@ -29,3 +29,7 @@ print(dic_2, 'dic2')
 # book. So you should take a moment and compare the loop using the if statement
 # and in operator with the loop using the get method. They do exactly the same
 # thing, but one is more succinct
+
+# other .get use cases
+# .get('keyfromdic') // returns none if the key does not exist
+# .get('keyfromdic', 'key you are looking for does not exist') // retuns the what was the written on the second arg if key does not exist
