@@ -1,5 +1,6 @@
 #print 10 most common words from romeo-full.txt
-
+# solve with list comprehension as well
+# print( sorted( [ (v,k) for k,v in counts.items() ], reverse=True ) )
 import string
 fhand = open('romeo-full.txt')
 counts = dict()
