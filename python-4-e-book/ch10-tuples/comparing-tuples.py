@@ -13,6 +13,6 @@
 # res = list()
 # for length, word in t:
 #     res.append(word)
-# # print(res)
+# print(res)
 
 
