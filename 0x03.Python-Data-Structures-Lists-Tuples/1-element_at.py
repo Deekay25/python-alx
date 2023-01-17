@@ -1,14 +1,19 @@
 # !/usr/bin/python3
 # so proud of myself
+# def element_at(my_list, idx):
+#     for num in range(len(my_list)):
+#         if idx < 0:
+#             return None
+#         elif idx > len(my_list)-1:
+#             return None
+#         else:
+#              num = idx
+#              return (my_list[num])
+
+
+
+#better  approach
 def element_at(my_list, idx):
-    for num in range(len(my_list)):
-        if idx < 0:
-            return None
-        elif idx > len(my_list)-1:
-            return None
-        else:
-             num = idx
-             return (my_list[num])
-
-
-
+    if idx < 0 or idx > len(my_list)-1:
+        return None
+    return my_list[idx]
